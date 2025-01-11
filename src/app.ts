@@ -1,6 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 import rootRouter from "./routes/root.route";
+import dotenv from "dotenv";
+dotenv.config();
 
 const MONGO_URI =
   "mongodb+srv://psanthoshkumar43:VtAC4vrAAGwXSo7Y@cluster0.pl3xn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";

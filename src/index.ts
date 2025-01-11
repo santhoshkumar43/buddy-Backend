@@ -1,6 +1,8 @@
 import { createServer } from "http";
 import { app } from "./app";
 import { initializeWebSocketServer } from "./websocket/websocket.server";
+import dotenv from "dotenv";
+dotenv.config();
 
 const PORT = 3000;
 
