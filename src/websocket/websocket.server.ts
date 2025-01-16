@@ -57,6 +57,6 @@ export function initializeWebSocketServer(server: any): void {
       console.log("Client disconnected");
     });
 
-    ws.send("Welcome to the WebSocket server! Send a message to analyze.");
+    // ws.send("Welcome to the WebSocket server! Send a message to analyze.");
   });
 }
