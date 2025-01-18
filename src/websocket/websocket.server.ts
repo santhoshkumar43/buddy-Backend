@@ -22,9 +22,10 @@ export function initializeWebSocketServer(server: any): void {
     Message.find({ userId })
       .then((messages) => {
         // Send all previous conversations to the user
-        const previousMessages = messages.map(
-          (message) => `You: ${message.user}, Bot: ${message.bot}`
-        );
+        const previousMessages = messages.map((message) => ({
+          user: message.user,
+          bot: message.bot,
+        }));
         ws.send(
           JSON.stringify({
             type: "previousMessages",
