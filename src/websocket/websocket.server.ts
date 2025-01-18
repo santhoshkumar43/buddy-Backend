@@ -50,7 +50,12 @@ export function initializeWebSocketServer(server: any): void {
         await newMessage.save();
 
         // Send response to the client
-        ws.send(botResponse);
+        ws.send(
+          JSON.stringify({
+            type: "newMessage",
+            message: botResponse,
+          })
+        );
       }
     });
 
